@@ -3,7 +3,7 @@ import requests
 class A:
 
     def getAPI(self):
-        rq=requests.get('https://jsonplaceholder.typicode.com/posts')
+        rq=requests.get('https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=1f3f536d81ae001def46f66fae3be1c2')
         print(rq.json())
 
 a = A()
