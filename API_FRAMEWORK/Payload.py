@@ -1,3 +1,4 @@
+from  utilities.configurations import *
 def addPlacePayload():
     body = {
         "location": {
@@ -33,3 +34,13 @@ def deletePlacePayload():
         "place_id": "c7b4fb65ecce98390d57676f75b5c990"
     }
     return body
+
+
+def buildPayloadDB(query):
+    addBody = {}
+    tp = getQuery(query)
+    addBody['first_name'] = ''
+    addBody['last_name'] = ''
+    addBody['gender'] = ''
+    addBody['hire_date'] = ''
+    return addBody

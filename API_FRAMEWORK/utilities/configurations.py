@@ -13,7 +13,7 @@ connector_config = {
     'user': getConfig()['SQL']['user'],
     'password': getConfig()['SQL']['password'],
     'database': getConfig()['SQL']['database'],
-    'host': getConfig()['SQL']['database']
+    'host': getConfig()['SQL']['host']
 
 }
 
@@ -26,6 +26,14 @@ def getConnection():
         return conn
     except Error as e:
         print(e)
+
+
+def getQuery():
+
+    conn = getConnection()
+    cursor = conn.cursor()
+    cursor.execute()
+
 
 
 

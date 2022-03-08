@@ -12,6 +12,10 @@ class ApiFramework:
     url_put = getConfig()['API']['endpoint'] + APIResources.updatemaps
     url_del = getConfig()['API']['endpoint'] + APIResources.deletemaps
 
+    def maps_db_post(self):
+        
+
+
     def add_maps(self, url_post):
         add_APIresponse = requests.post(self.url_post, json=addPlacePayload(),
                                         headers={"Content-Type": "application/json"})
