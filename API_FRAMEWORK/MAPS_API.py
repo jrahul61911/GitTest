@@ -43,3 +43,4 @@ if __name__ == "__main__":
     getAPI.update_maps('url_put')
     getAPI.get_maps('url_get')
     getAPI.del_maps('url_del')
+    getAPI.post_api('url_db')
