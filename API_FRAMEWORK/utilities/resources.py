@@ -3,7 +3,8 @@
 
 class APIResources:
 
-    getmaps = '/maps/api/place/get/json?place_id=c7b4fb65ecce98390d57676f75b5c990&key=qaclick123'
+    getmaps = '/maps/api/place/get/json?place_id=c1b3ce1b05562df6f8fb153e06fa2dad&key=qaclick123'
     addmaps = '/maps/api/place/add/json?key'
     updatemaps = '/maps/api/place/update/json'
     deletemaps = '/maps/api/place/delete/json'
+    add_db = '/Library/Addbook.php'

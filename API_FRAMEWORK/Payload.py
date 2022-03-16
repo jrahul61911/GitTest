@@ -1,4 +1,6 @@
-from  utilities.configurations import *
+from utilities.configurations import *
+
+
 def addPlacePayload():
     body = {
         "location": {
@@ -13,8 +15,8 @@ def addPlacePayload():
             "shoe park_01",
             "shop_near"
         ],
-        "website": "http://google.com",
-        "language": "RUSSIAN_UKRAINE_INDIA"
+        "website": "http://google.com/user",
+        "language": "RUSSIAN_UKRAINE_INDIA_PAK"
     }
 
     return body
@@ -22,7 +24,7 @@ def addPlacePayload():
 
 def updatePlacePayload():
     body = {
-        "place_id": "c7b4fb65ecce98390d57676f75b5c990",
+        "place_id": "c1b3ce1b05562df6f8fb153e06fa2dad",
         "address": "70 summer talk, india",
         "key": "qaclick123"
     }
@@ -31,7 +33,7 @@ def updatePlacePayload():
 
 def deletePlacePayload():
     body = {
-        "place_id": "c7b4fb65ecce98390d57676f75b5c990"
+        "place_id": "c1b3ce1b05562df6f8fb153e06fa2dad"
     }
     return body
 
@@ -39,8 +41,8 @@ def deletePlacePayload():
 def buildPayloadDB(query):
     addBody = {}
     tp = getQuery(query)
-    addBody['first_name'] = ''
-    addBody['last_name'] = ''
-    addBody['gender'] = ''
-    addBody['hire_date'] = ''
+    addBody['name'] = tp[0]
+    addBody['isbn'] = tp[1]
+    addBody['aisle'] = tp[2]
+    addBody['author'] = tp[3]
     return addBody

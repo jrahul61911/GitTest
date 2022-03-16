@@ -28,11 +28,14 @@ def getConnection():
         print(e)
 
 
-def getQuery():
+def getQuery(query):
 
     conn = getConnection()
     cursor = conn.cursor()
-    cursor.execute()
+    cursor.execute(query)
+    row = cursor.fetchone()
+    conn.close()
+    return row
 
 
 

@@ -12,9 +12,11 @@ class ApiFramework:
     url_put = getConfig()['API']['endpoint'] + APIResources.updatemaps
     url_del = getConfig()['API']['endpoint'] + APIResources.deletemaps
 
-    def maps_db_post(self):
-        
 
+    # def maps_db_post(self):
+    #     query = 'select * from books'
+    #     add_data_db = requests.post(self.url_db, json=buildPayloadDB(query))
+    #     print(add_data_db.text)
 
     def add_maps(self, url_post):
         add_APIresponse = requests.post(self.url_post, json=addPlacePayload(),
@@ -43,4 +45,4 @@ if __name__ == "__main__":
     getAPI.update_maps('url_put')
     getAPI.get_maps('url_get')
     getAPI.del_maps('url_del')
-    getAPI
+    getAPI.maps_db_post()
