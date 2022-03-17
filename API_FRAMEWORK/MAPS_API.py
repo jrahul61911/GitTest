@@ -12,9 +12,6 @@ class ApiFramework:
     url_put = getConfig()['API']['endpoint'] + APIResources.updatemaps
     url_del = getConfig()['API']['endpoint'] + APIResources.deletemaps
 
-
-
-
     def add_maps(self, url_post):
         add_APIresponse = requests.post(self.url_post, json=addPlacePayload(),
                                         headers={"Content-Type": "application/json"})
@@ -36,10 +33,10 @@ class ApiFramework:
         print(del_APIresponse.json())
 
 
-if __name__ == "__main__":
-    getAPI = ApiFramework()
-    getAPI.add_maps('url_post')
-    getAPI.update_maps('url_put')
-    getAPI.get_maps('url_get')
-    getAPI.del_maps('url_del')
-    getAPI.maps_db_post()
+# if __name__ == "__main__":
+#     getAPI = ApiFramework()
+#     getAPI.add_maps('url_post')
+#     getAPI.update_maps('url_put')
+#     getAPI.get_maps('url_get')
+#     getAPI.del_maps('url_del')
+#     getAPI.maps_db_post()
