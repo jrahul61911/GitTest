@@ -13,10 +13,7 @@ class ApiFramework:
     url_del = getConfig()['API']['endpoint'] + APIResources.deletemaps
 
 
-    # def maps_db_post(self):
-    #     query = 'select * from books'
-    #     add_data_db = requests.post(self.url_db, json=buildPayloadDB(query))
-    #     print(add_data_db.text)
+
 
     def add_maps(self, url_post):
         add_APIresponse = requests.post(self.url_post, json=addPlacePayload(),
